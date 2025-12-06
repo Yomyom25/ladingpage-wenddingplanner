@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-grisClaro: #EDEDED;
+    --color-negro: #3B3833;
+    --color-blanco: #fff;
+    --color-azul: #052F40;
+    --color-dorado: #A6813C;
+    --color-doradoHover: #8C6927;
+
+    --tipografia-titulo: "Alex Brush", cursive;
+    --tipografia-subtitulos: "Lobster", sans-serif;
+    --tipografia-texto: "Roboto", sans-serif;
+}
+
+.ancho {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.margen {
+    padding: 15px;
+}
+
+.centrar {
+    text-align: center;
+}
+
