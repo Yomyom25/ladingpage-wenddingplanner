@@ -160,7 +160,8 @@ header {
 /* SECCION: MAIN */
 .main-section {
     background-color: var(--color-azul);
-    height: 80vh;
+    height: 100vh;
+    max-height: 900px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -243,8 +244,8 @@ header {
 
 .img-fondo {
     position: absolute;
-    right: 10%;
-    top: 15%;
+    right: 5%;
+    top: 10%;
     z-index: 1;
 }
 
