@@ -2,15 +2,23 @@
 
 :root {
     --color-grisClaro: #EDEDED;
+    --color-grisOscuro: #CCC;
     --color-negro: #3B3833;
     --color-blanco: #fff;
     --color-azul: #052F40;
     --color-dorado: #A6813C;
+    --color-doradoBajo: #EBE2CE;
     --color-doradoHover: #8C6927;
 
     --tipografia-titulo: "Alex Brush", cursive;
     --tipografia-subtitulos: "Lobster", sans-serif;
     --tipografia-texto: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .ancho {
@@ -26,3 +34,120 @@
     text-align: center;
 }
 
+.titulo {
+    font-family: var(--tipografia-titulo) ;
+}
+
+.subtitulo {
+    font-family: var(--tipografia-subtitulos);
+}
+
+/* HEADER */
+
+header {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    border-bottom: 1px var(--color-grisClaro) solid;
+}
+
+.icons-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-back {
+    padding: 10px 15px;
+    background-color: var(--color-doradoBajo);
+    border-radius: 5px;
+}
+
+.icon-back a {
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--color-dorado);
+}
+
+.button-header {
+    padding: 12px 15px;
+    background-color: var(--color-dorado);
+    border-radius: 5px;
+
+}
+
+.button-header a {
+    font-family: var(--tipografia-texto);
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color-blanco);
+}
+
+/* NAV-BAR */
+.nav-bar {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-nav img {
+    width: 120px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-menu ul {
+    text-decoration: none;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--color-azul);
+    font-family: var(--tipografia-subtitulos);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.nav-menu li a:hover {
+    color: var(--color-doradoHover);
+}
+
+.icon-lupa {
+    border: 1px var(--color-grisClaro) solid;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.icon-lupa i {
+    text-decoration: none;
+    color: var(--color-azul);
+}
+
+.icon-lupa:hover {
+    background-color: var(--color-grisOscuro);
+}
+
+/* SECCION: MAIN */
+.main-section {
+    background-color: var(--color-azul);
+    height: 300px;
+}
+
+/* SECCION: PARALLAX */
+
+
+/* SECCION: WHY US */
