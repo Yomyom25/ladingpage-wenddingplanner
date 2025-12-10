@@ -166,8 +166,10 @@ header {
 }
 
 /* SECCION: MAIN */
-.main-section {
+.fondo {
     background-color: var(--color-azul);
+}
+.main-section {
     height: 100vh;
     max-height: 900px;
     display: flex;
@@ -538,9 +540,50 @@ header {
     text-align: center;
 }
 
+.card-service-container {
+    padding: 50px 20px;
+    display: flex;
+    gap: 30px;
+}
 
+.card-services {
+    border: 1px blue solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-services .circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blanco);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.card-services .icon-container {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-services .icon-container svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-dorado); 
+}
 
 /* SECCION: PORTFOLIO */
+
+
 
 /* SECCION: EXPERTS */
 
