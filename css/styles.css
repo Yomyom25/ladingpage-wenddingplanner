@@ -46,6 +46,10 @@
     font-family: var(--tipografia-texto);
 }
 
+.bold {
+    font-weight: 600;
+}
+
 /* HEADER */
 
 header {
@@ -264,6 +268,187 @@ header {
 }
 
 /* SECCION: PARALLAX */
+.parallax-section {
+    background-image: url(../img/fondo_parallax.jpg);
+    background-attachment: fixed;
+    position: relative;
+    height: 100vh;
+    max-height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.filtro {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(17, 8, 2, 0.555);
+}
+
+.text-parallax-container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.text-parallax {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+    color: var(--color-blanco);
+    padding: 0 50px;
+}
+
+.text-parallax .text {
+    font-size: 7vh;
+    max-width: 400px;
+}
+
+.parallax-card {
+    display: flex;
+    margin-top: 30px;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.icon-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    flex-grow: 1;
+}
+
+.parallax-card .subtitulo {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.parallax-card .texto {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.icon-container svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}
+
+/* .img-parallax-container {
+    width: 55%;
+    display: block;
+    height: 500px;
+    z-index: 2;
+} */
+
+.img-parallax-container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 500px;
+    z-index: 2;
+}
+
+.img-boda {
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.img-boda:nth-child(2) {
+    margin-top: -10px;
+    align-self: flex-end;
+}
+
+.img-boda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 /* SECCION: WHY US */
+.nosotros-section {
+    height: 100vh;
+    max-height: 900px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-us {
+    border: 1px red solid;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.text-us h2 {
+    font-size: 8vh;
+    color: var(--color-azul);
+}
+
+.us-text p {
+    color: #3B3833;
+}
+
+.reason-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.reason-text h3 {
+    color: var(--color-azul);
+}
+
+.circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dorado);
+    color: var(--color-blanco);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.card-us {
+        border: 1px blue solid;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.us-card {
+    background-color: var(--color-dorado);
+    color: var(--color-blanco);
+}
