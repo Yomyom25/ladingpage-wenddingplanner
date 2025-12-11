@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovespring Wedding Planner</title>
     <meta name="description" content="Proyecto unidad 4">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/animate.css" />
 
-    <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="js/responsiveslides.min copy.js"></script>
     <script src="js/responsiveslides.min.js"></script>
+
+    <script src="js/fancybox_min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
 </head>
 
 <body>
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="btn-video">
-                        <a class="video" href="#">
+                        <a id="boton_video_youtube" class="video" href="#">
                             <i class="fa-solid fa-play"></i>
                         </a>
                     </div>
@@ -851,7 +851,8 @@
 
         <div class="blog-container">
             <article class="galleria-img">
-                <a href="img/blog_img1.jpg" data-fancybox="gallery" data-caption="Foto1">
+                <a href="img/blog_img1.jpg" data-fancybox="blog-gallery"
+                    data-caption="The Wedding Day: a Detailed Gameplan">
                     <figure class="foto">
                         <img src="img/blog_img1.jpg" alt="The Wedding Day">
                     </figure>
@@ -866,9 +867,12 @@
             </article>
 
             <article class="galleria-img">
-                <figure class="foto">
-                    <img src="img/blog_img2.jpg" alt="The Wedding Day">
-                </figure>
+                <a href="img/blog_img2.jpg" data-fancybox="blog-gallery"
+                    data-caption="The Story of the Best Man Warren">
+                    <figure class="foto">
+                        <img src="img/blog_img2.jpg" alt="The Wedding Day">
+                    </figure>
+                </a>
 
                 <div class="texto-up">
                     <h3 class="subtitulo">The Story of the Best Man Warren</h3>
@@ -879,9 +883,12 @@
             </article>
 
             <article class="galleria-img">
-                <figure class="foto">
-                    <img src="img/blog_img3.jpg" alt="The Wedding Day">
-                </figure>
+                <a href="img/blog_img3.jpg" data-fancybox="blog-gallery"
+                    data-caption="Meet Yet Another Groomsman, Pat!">
+                    <figure class="foto">
+                        <img src="img/blog_img3.jpg" alt="The Wedding Day">
+                    </figure>
+                </a>
 
                 <div class="texto-up">
                     <h3 class="subtitulo">Meet Yet Another Groomsman, Pat!</h3>
@@ -1024,53 +1031,81 @@
         </div>
     </section>
 
-    <script>
-        let modalYaMostrado = false;
 
-        // Función para abrir modal
-        function abrirModal() {
-            if (!modalYaMostrado) {
-                $("#modal").addClass("mostrar");
-                modalYaMostrado = true;
+    <div id="modal_video" class="modal-video">
+        <div class="modal-contenido-video">
+            <div class="video-responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1GbR7J3HaFo?si=4LStIptenKlFnrE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <span class="cerrar-video" id="cerrar_modal_video">&times;</span>
+            </div>
+        </div>
+
+        <script>
+            let modalYaMostrado = false;
+
+            // Función para abrir modal
+            function abrirModal() {
+                if (!modalYaMostrado) {
+                    $("#modal").addClass("mostrar");
+                    modalYaMostrado = true;
+                }
             }
-        }
 
-        // Botón manual
-        $("#boton_modal").click(function (e) {
-            e.preventDefault();
-            abrirModal();
-        });
-
-        // Cerrar modal
-        $("#cerrar_modal").click(function () {
-            $("#modal").removeClass("mostrar");
-        });
-
-        // Modal automático a los 5 segundos
-        setTimeout(abrirModal, 1000);
-
-        // Scroll más de 600px
-        let scrollActivado = false;
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 600 && !scrollActivado) {
-                scrollActivado = true;
+            // Botón manual
+            $("#boton_modal").click(function (e) {
+                e.preventDefault();
                 abrirModal();
-            }
-        });
+            });
 
-        // Click fuera del modal
-        window.onclick = function (event) {
-            if (event.target.id === 'modal') {
+            // Cerrar modal
+            $("#cerrar_modal").click(function () {
                 $("#modal").removeClass("mostrar");
+            });
+
+            // Modal automático a los 5 segundos
+            setTimeout(abrirModal, 1000);
+
+            // Scroll más de 600px
+            let scrollActivado = false;
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 600 && !scrollActivado) {
+                    scrollActivado = true;
+                    abrirModal();
+                }
+            });
+
+            // Click fuera del modal
+            window.onclick = function (event) {
+                if (event.target.id === 'modal') {
+                    $("#modal").removeClass("mostrar");
+                }
+            };
+
+            $("#boton_video_youtube").click(function (e) {
+                e.preventDefault();
+                $("#modal_video").addClass("mostrar");
+            });
+
+            function cerrarModalVideo() {
+                $("#modal_video").removeClass("mostrar");
             }
-        };
 
-        // Inicializar WOW
-        new WOW().init();
+            $("#cerrar_modal_video").click(function () {
+                cerrarModalVideo();
+            });
 
-        //Script galleria de fotos con fancybox
-        Fancybox.bind("[data-fancybox]", {});
-    </script>
+            window.onclick = function (event) {
+                if (event.target.id === 'modal_video') {
+                    cerrarModalVideo();
+                }
+            };
+
+            // Inicializar WOW
+            new WOW().init();
+
+            //Script galleria de fotos con fancybox
+            Fancybox.bind("[data-fancybox]", {});
+        </script>
 </body>
 
 </html>
