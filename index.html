@@ -7,10 +7,18 @@
     <title>Lovespring Wedding Planner</title>
     <meta name="description" content="Proyecto unidad 4">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/animate.css" />
 
+    <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="js/responsiveslides.min copy.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
 </head>
 
 <body>
@@ -843,9 +851,11 @@
 
         <div class="blog-container">
             <article class="galleria-img">
-                <figure class="foto">
-                    <img src="img/blog_img1.jpg" alt="The Wedding Day">
-                </figure>
+                <a href="img/blog_img1.jpg" data-fancybox="gallery" data-caption="Foto1">
+                    <figure class="foto">
+                        <img src="img/blog_img1.jpg" alt="The Wedding Day">
+                    </figure>
+                </a>
 
                 <div class="texto-up">
                     <h3 class="subtitulo">The Wedding Day: a Detailed Gameplan</h3>
@@ -1005,7 +1015,7 @@
                     </p>
                     <div class="send">
                         <form action="">
-                            <input class="input-style" type="email" name="" id="" placeholder="Email">
+                            <input class="input-style" type="email" name="" id="" placeholder="Email Adress">
                             <button class="envio">SUSCRIBE</button>
                         </form>
                     </div>
@@ -1015,55 +1025,48 @@
     </section>
 
     <script>
-        // Inicializar WOW
-        new WOW().init();
+        let modalYaMostrado = false;
 
-        // abrir menu
-        $("#icono_menu").click(function () {
-            $("#contenedor_menu").toggleClass("abrir_menu");
+        // Función para abrir modal
+        function abrirModal() {
+            if (!modalYaMostrado) {
+                $("#modal").addClass("mostrar");
+                modalYaMostrado = true;
+            }
+        }
+
+        // Botón manual
+        $("#boton_modal").click(function (e) {
+            e.preventDefault();
+            abrirModal();
         });
 
-        $(".btn_ancla").click(function () {
-            $("#contenedor_menu").toggleClass("abrir_menu");
-        });
-
-        // Script acordeon
-        $(".acordeon-titulo").click(function () {
-            var t = $(this);
-            var tp = t.next();
-            tp.slideToggle();
-        });
-
-        //Script modal
-        $("#boton_modal").click(function () {
-            $("#modal").addClass("mostrar");
-        });
+        // Cerrar modal
         $("#cerrar_modal").click(function () {
             $("#modal").removeClass("mostrar");
         });
 
-        // por tiempo 5 segundos
-        function tiempo() {
-            $("#modal").addClass("mostrar");
-        }
-        setTimeout(tiempo, 5000);
+        // Modal automático a los 5 segundos
+        setTimeout(abrirModal, 1000);
 
-        // scroll mas de 600px
-        function onScroll() {
-            const scrollTop = window.scrollY;
-
-            if (scrollTop > 600) {
-                $("#modal").addClass("mostrar");
+        // Scroll más de 600px
+        let scrollActivado = false;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 600 && !scrollActivado) {
+                scrollActivado = true;
+                abrirModal();
             }
-        }
-        window.addEventListener('scroll', onScroll);
+        });
 
-        // click por fuera
+        // Click fuera del modal
         window.onclick = function (event) {
-            if (event.target == modal) {
+            if (event.target.id === 'modal') {
                 $("#modal").removeClass("mostrar");
             }
         };
+
+        // Inicializar WOW
+        new WOW().init();
 
         //Script galleria de fotos con fancybox
         Fancybox.bind("[data-fancybox]", {});
