@@ -58,6 +58,10 @@
     color: var(--color-azul);
 }
 
+.gris {
+    color: var(--color-grisOscuro);
+}
+
 /* HEADER */
 
 header {
@@ -771,10 +775,71 @@ header {
 }
 
 /* SECCION: EXPERTS */
+.experts-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card-expert-container {
+    padding: 30px 0;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+.expert-card {
+    margin-bottom: 20px;
+    text-align: center;
+    width: 200px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 10px 35px -6px rgba(0, 0, 0, 0.26);
+}
+
+.expert-card h3 {
+    font-size: 22px;
+    padding: 20px 0;
+}
+
+.expert-text {
+    padding: 50px 20px;
+    width: 50%;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 50px;
+}
+
+.text-container h2 {
+    font-size: 60px;
+    color: var(--color-azul);
+    margin: 5px 10px;
+    font-weight: normal;
+}
+
+.text-container .texto-normal{
+    color: var(--color-grisOscuro);
+    width: 100%;
+    max-width: 700px;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.8;
+    margin-top: 30px;
+}
 
 .skills {
-    width: 40%;
+    width: 80%;
 }
 
 .skill {
@@ -824,8 +889,181 @@ header {
 }
 
 /* SECCION: PRICING */
+.prices-section {
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blanco);
+}
+
+.prices-section h2 {
+    font-size: 40px;
+    color: var(--color-azul);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.prices-section .texto-vertical {
+    color: var(--color-grisOscuro);
+    width: 100%;
+    max-width: 700px;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.prices-card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    border: 2px var(--color-grisClaro) solid;
+    border-top: 5px var(--color-dorado) solid;
+    border-radius: 5px;
+    padding: 20px 30px;
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    transform: scale(1.05);
+}
+
+.texto-price-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+.price-card .plan {
+    font-weight: 400;
+}
+
+.precio {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.vinetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 10px;
+}
+
+.vinetas-container span {
+    margin-left: 10px;
+}
+
+.btn-prices {
+    padding: 20px 15px;
+    display: inline-block;
+    background-color: var(--color-dorado);
+    text-decoration: none;
+    color: var(--color-blanco);
+    transform: skewX(-10deg);
+    transition: all 0.3s ease;
+}
+
+.btn-prices:hover {
+    background-color: var(--color-doradoHover);
+}
+
+.btn {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 /* SECCION: CLIENTS FEEDBACK */
+.client-section {
+    height: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blanco);
+}
+
+.client-section h2 {
+    font-size: 40px;
+    color: var(--color-azul);
+    margin: 10px 0px;
+    font-weight: normal;
+}
+
+.client-section .texto-vertical {
+    color: var(--color-grisOscuro);
+    width: 100%;
+    max-width: 700px;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.img-circulo {
+    position: absolute;
+    top: -15%;
+    clip-path: circle(50% at 50% 50%);
+    width: 60px;
+    height: 60px;
+}
+
+.img-circulo img {
+    width: 100%;
+    height: auto;
+}
+
+.card-carrusel {
+    position: relative;
+    border: 2px var(--color-grisClaro) solid;
+    width: 350px;
+    padding: 40px 30px;
+}
+
+.carrusel-container {
+    padding: 20px 0px;
+}
+
+.coment {
+    color: var(--color-grisOscuro);
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.nombre {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.texto-oculto {
+    opacity: 0
+}
+
+.card-carrusel:hover .texto-oculto {
+    opacity: 1
+}
 
 /* SECCION: BLOG */
 
