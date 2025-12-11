@@ -610,7 +610,7 @@ header {
     stroke: var(--color-dorado);
 }
 
-.text-card {
+.card-services .text-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -671,7 +671,7 @@ header {
     font-weight: normal;
 }
 
-.portafolio-section p {
+.portafolio-section .texto-vertical {
     color: var(--color-grisOscuro);
     width: 100%;
     max-width: 700px;
@@ -682,6 +682,89 @@ header {
     text-align: center;
 }
 
+.card-port-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.porfolio-card {
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.porfolio-card figure {
+    margin: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.porfolio-card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.texto-card {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.texto-card h3 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--color-negro);
+    font-weight: 500;
+}
+
+.texto-card p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+}
+
+.div-oculto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(5, 47, 64, 0.0);
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.div-oculto i {
+    font-size: 25px;
+    color: var(--color-blanco);
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: opacity 0.3s ease 0.15s, transform 0.3s ease 0.15s;
+}
+
+.porfolio-card:hover .div-oculto,
+.porfolio-card:hover figure .div-oculto {
+    opacity: 1;
+    background-color: #052f40c0;
+}
+
+.porfolio-card:hover .div-oculto i,
+.porfolio-card:hover figure .div-oculto i {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* SECCION: EXPERTS */
 
