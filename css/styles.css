@@ -391,6 +391,7 @@ header {
     height: auto;
     max-height: 900px;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     padding: 60px 0; 
 }
@@ -440,7 +441,7 @@ header {
     font-weight: 500;
 }
 
-.circulo {
+.reason-text .circulo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -517,72 +518,169 @@ header {
 /* SECCION: SERVICES */
 .service-section {
     height: auto;
-    max-height: 900px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-blanco);
 }
 
 .service-section h2 {
-    font-size: 7vh;
+    font-size: 40px;
     color: var(--color-azul);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
 
 .service-section p {
     color: var(--color-grisOscuro);
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     font-size: 16px;
     margin: 0;
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .card-service-container {
-    padding: 50px 20px;
+    padding: 0;
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .card-services {
-    border: 1px blue solid;
+    margin: 10px 0px;
+    border: 1px solid var(--color-grisClaro);
+    width: 100%;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
+}
+
+.card-services figure {
+    margin: 0;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-services figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-services .circulo {
     display: flex;
+    position: absolute;
     align-items: center;
     justify-content: center;
     background-color: var(--color-blanco);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    font-size: 20px;
+    width:90px;
+    height: 90px;
+    border-radius: 50%;
+    top: 65%;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 .card-services .icon-container {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .card-services .icon-container svg {
-    width: 30px;
-    height: 30px;
-    fill: var(--color-dorado); 
+    width: 40px;
+    height: 40px;
+    fill: var(--color-dorado);
+    stroke: var(--color-dorado);
+}
+
+.text-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 20px 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.text-card h3 {
+    font-size: 24px;
+    color: var(--color-azul);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.text-card a {
+    font-family: var(--tipografia-texto);
+    text-decoration: none;
+    color: var(--color-azul);
+    padding: 20px 15px;
+    background-color: var(--color-blanco);
+    position: absolute;
+    top: 80%;
+    display: inline-block;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease; 
+}
+
+.text-card a:hover {
+    background-color: var(--color-grisClaro);
+    transform: skewX(-10deg);
+}
+
+.text-card a i {
+    margin-left: 5px;
+    font-size: 12px;
 }
 
 /* SECCION: PORTFOLIO */
+.portafolio-section {
+    height: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blanco);
+}
 
+.portafolio-section h2 {
+    font-size: 40px;
+    color: var(--color-azul);
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.portafolio-section p {
+    color: var(--color-grisOscuro);
+    width: 100%;
+    max-width: 700px;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+}
 
 
 /* SECCION: EXPERTS */
