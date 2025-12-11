@@ -304,6 +304,18 @@ header {
     justify-content: space-between;
 }
 
+.menu-movil {
+    display: none;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-movil .logo-nav {
+    width: auto;
+}
+
+
 .logo-nav img {
     width: 120px;
 }

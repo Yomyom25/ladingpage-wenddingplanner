@@ -11,6 +11,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/movil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/animate.css" />
 
@@ -59,16 +60,42 @@
                 </a>
             </div>
         </div>
-
         <div class="button-header">
             <a href="#" id="boton_modal">Get a Quote</a>
         </div>
     </header>
     <div class="header-sticky-container">
+        <div class="menu-movil">
+            <figure class="logo-nav">
+                <img src="img/logo_header.png" alt="logo de Lovespring">
+            </figure>
+
+            <i id="btn_open_menu" class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Menú lateral que se abre en móvil -->
+        <nav class="nav-links" id="menu_lateral">
+            <i id="btn_close_menu" class="fa-solid fa-xmark menu-close"></i>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#us">Why us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portafolio">Portfolio</a></li>
+                <li><a href="#expertos">Team</a></li>
+                <li><a href="#precios">Pricing</a></li>
+                <li><a href="#clientes">Testimonial</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+
         <div class="nav-bar">
             <figure class="logo-nav">
                 <img src="img/logo_header.png" alt="logo de Lovespring">
             </figure>
+
             <nav>
                 <ul class="nav-menu">
                     <li><a href="#about">About</a></li>
@@ -1211,6 +1238,25 @@
                     cerrarModalVideo();
                 }
             };
+
+            const btnOpen = document.getElementById("btn_open_menu");
+            const btnClose = document.getElementById("btn_close_menu");
+            const menu = document.getElementById("menu_lateral");
+
+            btnOpen.addEventListener("click", () => {
+                menu.classList.add("abrir_menu");
+            });
+
+            btnClose.addEventListener("click", () => {
+                menu.classList.remove("abrir_menu");
+            });
+
+            // Cerrar tocando fuera
+            menu.addEventListener("click", (e) => {
+                if (e.target === menu) {
+                    menu.classList.remove("abrir_menu");
+                }
+            });
 
             // Inicializar WOW
             new WOW().init();
