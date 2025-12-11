@@ -8,8 +8,9 @@
     <meta name="description" content="Proyecto unidad 4">
 
     <link rel="stylesheet" href="css/styles.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -29,31 +30,32 @@
         </div>
 
         <div class="button-header">
-            <a href="#">Get a Quote</a>
+            <a href="#" id="boton_modal">Get a Quote</a>
         </div>
     </header>
+    <div class="header-sticky-container">
+        <div class="nav-bar">
+            <figure class="logo-nav">
+                <img src="img/logo_header.png" alt="logo de Lovespring">
+            </figure>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#us">Why us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portafolio">Porfolio</a></li>
+                    <li><a href="#expertos">Team</a></li>
+                    <li><a href="#precios">Princing</a></li>
+                    <li><a href="#clientes">Testimonial</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <ul>
+            </nav>
 
-    <div class="nav-bar">
-        <figure class="logo-nav">
-            <img src="img/logo_header.png" alt="logo de Lovespring">
-        </figure>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Why us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Porfolio</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Princing</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <ul>
-        </nav>
-
-        <a class="icon-lupa" href="#">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
+            <a class="icon-lupa" href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
     </div>
 
     <section class="fondo">
@@ -89,7 +91,7 @@
             </div>
         </main>
     </section>
-    <section class="parallax-section">
+    <section class="parallax-section" id="about">
 
         <div class="text-parallax-container">
             <div class="text-parallax">
@@ -213,7 +215,7 @@
         <div class="filtro"></div>
     </section>
 
-    <section class="nosotros-section ancho">
+    <section class="nosotros-section ancho" id="us">
         <div class="text-us">
             <article class="us-text">
                 <h2 class="subtitulo">Why Us</h2>
@@ -410,7 +412,7 @@
         </div>
     </section>
 
-    <section class="service-section ancho">
+    <section class="service-section ancho" id="services">
 
         <h2 class="subtitulo"> <span class="dorado">Wedding</span> Services </h2>
         <p class="texto">
@@ -598,7 +600,7 @@
         </div>
     </section>
 
-    <section class="portafolio-section ancho">
+    <section class="portafolio-section ancho" id="portafolio">
         <h2 class="subtitulo">Our <span class="dorado">Portfolio</span> </h2>
         <p class="texto texto-vertical">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
@@ -650,7 +652,7 @@
         </div>
     </section>
 
-    <section class="experts-section ancho">
+    <section class="experts-section ancho" id="expertos">
         <div class="card-expert-container">
             <article class="expert-card">
                 <figure>
@@ -719,7 +721,7 @@
         </div>
     </section>
 
-    <section class="prices-section ancho">
+    <section class="prices-section ancho" id="precios">
         <h2 class="subtitulo">Our <span class="dorado">Pricing Plans</span></h2>
         <p class="texto texto-vertical">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
@@ -809,7 +811,7 @@
         </div>
     </section>
 
-    <section class="client-section ancho">
+    <section class="client-section ancho" id="clientes">
         <p class="texto dorado">What They Are Saying</p>
         <h2 class="subtitulo">Client's <span class="dorado">Feedback</span></h2>
         <p class="texto texto-vertical">
@@ -832,7 +834,7 @@
         </div>
     </section>
 
-    <section class="blog-section ancho">
+    <section class="blog-section ancho" id="blog">
         <h2 class="subtitulo">Our <span class="dorado">Blog</span></h2>
         <p class="texto texto-vertical">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
@@ -881,7 +883,7 @@
         </div>
     </section>
 
-    <section class="contact-section ancho">
+    <section class="contact-section ancho" id="contact">
         <article class="contact-text">
             <div class="texto-direccion">
                 <h3 class="subtitulo azul">Address</h3>
@@ -952,10 +954,10 @@
             </figure>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#inicio">Home</a></li>
+                    <li><a href="#us">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <ul>
             </nav>
             <div class="icon-contenedor">
@@ -973,7 +975,8 @@
                 <button class="envio">SEND MESSAGE</button>
             </div>
 
-            <p class="texto">* rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis.</p>
+            <p class="texto">* rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Vestibulum ante
+                ipsum primis.</p>
         </div>
 
         <p class="gris texto fechas"> © Lovespring - 2021, Made With Love </p>
@@ -982,6 +985,89 @@
     <a href="#inicio">
         <i class="ir-arriba fa fa-arrow-up fa-1x"></i>
     </a>
+
+    <section id="modal" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrar_modal" class="cerrar-modal">&times;</span>
+
+            <article class="modal-inner">
+                <div class="img_modal">
+                    <img src="img/img-modal.jpg" alt="Foto del modal" />
+                </div>
+
+                <div class="texto-modal">
+                    <h3 class="subtitulo azul">Join Our Newsletter</h3>
+
+                    <p class="texto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                        veniam non repellendus corrupti placeat itaque iste doloribus ullam
+                        illum magni.
+                    </p>
+                    <div class="send">
+                        <form action="">
+                            <input class="input-style" type="email" name="" id="" placeholder="Email">
+                            <button class="envio">SUSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        // Inicializar WOW
+        new WOW().init();
+
+        // abrir menu
+        $("#icono_menu").click(function () {
+            $("#contenedor_menu").toggleClass("abrir_menu");
+        });
+
+        $(".btn_ancla").click(function () {
+            $("#contenedor_menu").toggleClass("abrir_menu");
+        });
+
+        // Script acordeon
+        $(".acordeon-titulo").click(function () {
+            var t = $(this);
+            var tp = t.next();
+            tp.slideToggle();
+        });
+
+        //Script modal
+        $("#boton_modal").click(function () {
+            $("#modal").addClass("mostrar");
+        });
+        $("#cerrar_modal").click(function () {
+            $("#modal").removeClass("mostrar");
+        });
+
+        // por tiempo 5 segundos
+        function tiempo() {
+            $("#modal").addClass("mostrar");
+        }
+        setTimeout(tiempo, 5000);
+
+        // scroll mas de 600px
+        function onScroll() {
+            const scrollTop = window.scrollY;
+
+            if (scrollTop > 600) {
+                $("#modal").addClass("mostrar");
+            }
+        }
+        window.addEventListener('scroll', onScroll);
+
+        // click por fuera
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                $("#modal").removeClass("mostrar");
+            }
+        };
+
+        //Script galleria de fotos con fancybox
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
 </body>
 
 </html>
