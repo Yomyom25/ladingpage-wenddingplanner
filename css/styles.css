@@ -1228,6 +1228,8 @@ header {
 
 .carrusel-container {
     padding: 20px 0px;
+    display: flex;
+    gap: 20px;
 }
 
 .coment {
