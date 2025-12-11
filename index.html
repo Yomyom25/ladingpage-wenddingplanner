@@ -22,6 +22,26 @@
 
     <script src="js/carousel.js"></script>
     <link rel="stylesheet" href="css/carousel.css">
+
+    <script src="responsiveslides.min.js"></script>
+    <link rel="stylesheet" href="css/slidefotos.css">
+    <script>
+        $(function () {
+            $("#slider4").responsiveSlides({
+                auto: false,
+                pager: false,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -821,103 +841,104 @@
             </article>
         </div>
     </section>
-<section class="client-section ancho" id="clientes">
-    <p class="texto dorado">What They Are Saying</p>
-    <h2 class="subtitulo">Client's <span class="dorado">Feedback</span></h2>
-    <p class="texto texto-vertical">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
-        itaque et.Lorem ipsum dolor sit amet
-    </p>
+    <section class="client-section ancho" id="clientes">
+        <p class="texto dorado">What They Are Saying</p>
+        <h2 class="subtitulo">Client's <span class="dorado">Feedback</span></h2>
+        <p class="texto texto-vertical">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
+            itaque et.Lorem ipsum dolor sit amet
+        </p>
 
-    <div id="carousel" class="carrusel-container ancho">
-        
-        <div id="slide-container">
-            
-            <article class="card-carrusel slide" data-slideindex="0">
-                <figure class="img-circulo">
-                    <img src="img/img_carrusel-test.jpg" alt="">
-                </figure>
-                <p class="coment texto">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, excepturi."</p>
+        <div id="carousel" class="carrusel-container ancho">
 
-                <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido 1</h3>
-                    <p class="ocupacion texto dorado">Ocupacion 1</p>
-                </div>
-            </article>
+            <div id="slide-container">
 
-            <article class="card-carrusel slide" data-slideindex="1">
-                <figure class="img-circulo">
-                    <img src="img/img_carrusel-test.jpg" alt="">
-                </figure>
-                <p class="coment texto">"Un servicio excelente. Los recomiendo al 100%."</p>
+                <article class="card-carrusel slide" data-slideindex="0">
+                    <figure class="img-circulo">
+                        <img src="img/img_carrusel-test.jpg" alt="">
+                    </figure>
+                    <p class="coment texto">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, excepturi."
+                    </p>
 
-                <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido 2</h3>
-                    <p class="ocupacion texto dorado">Ocupacion 2</p>
-                </div>
-            </article>
+                    <div class="texto-oculto">
+                        <h3 class="nombre subtitulo azul">Nombre Apellido 1</h3>
+                        <p class="ocupacion texto dorado">Ocupacion 1</p>
+                    </div>
+                </article>
 
-            <article class="card-carrusel slide" data-slideindex="2">
-                <figure class="img-circulo">
-                    <img src="img/img_carrusel-test.jpg" alt="">
-                </figure>
-                <p class="coment texto">"La boda de mis sueños se hizo realidad con Lovespring."</p>
+                <article class="card-carrusel slide" data-slideindex="1">
+                    <figure class="img-circulo">
+                        <img src="img/img_carrusel-test.jpg" alt="">
+                    </figure>
+                    <p class="coment texto">"Un servicio excelente. Los recomiendo al 100%."</p>
 
-                <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido 3</h3>
-                    <p class="ocupacion texto dorado">Ocupacion 3</p>
-                </div>
-            </article>
-            
-            <article class="card-carrusel slide" data-slideindex="3">
-                <figure class="img-circulo">
-                    <img src="img/img_carrusel-test.jpg" alt="">
-                </figure>
-                <p class="coment texto">"Atención al detalle y mucha profesionalidad."</p>
+                    <div class="texto-oculto">
+                        <h3 class="nombre subtitulo azul">Nombre Apellido 2</h3>
+                        <p class="ocupacion texto dorado">Ocupacion 2</p>
+                    </div>
+                </article>
 
-                <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido 4</h3>
-                    <p class="ocupacion texto dorado">Ocupacion 4</p>
-                </div>
-            </article>
+                <article class="card-carrusel slide" data-slideindex="2">
+                    <figure class="img-circulo">
+                        <img src="img/img_carrusel-test.jpg" alt="">
+                    </figure>
+                    <p class="coment texto">"La boda de mis sueños se hizo realidad con Lovespring."</p>
 
-            <article class="card-carrusel slide" data-slideindex="4">
-                <figure class="img-circulo">
-                    <img src="img/img_carrusel-test.jpg" alt="">
-                </figure>
-                <p class="coment texto">"El mejor equipo de Wedding Planners de la zona."</p>
+                    <div class="texto-oculto">
+                        <h3 class="nombre subtitulo azul">Nombre Apellido 3</h3>
+                        <p class="ocupacion texto dorado">Ocupacion 3</p>
+                    </div>
+                </article>
 
-                <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido 5</h3>
-                    <p class="ocupacion texto dorado">Ocupacion 5</p>
-                </div>
-            </article>
+                <article class="card-carrusel slide" data-slideindex="3">
+                    <figure class="img-circulo">
+                        <img src="img/img_carrusel-test.jpg" alt="">
+                    </figure>
+                    <p class="coment texto">"Atención al detalle y mucha profesionalidad."</p>
 
-            <article class="card-carrusel slide" data-slideindex="5">
-                <figure class="img-circulo">
-                    <img src="img/img_carrusel-test.jpg" alt="">
-                </figure>
-                <p class="coment texto">"Simplemente perfecto, superó mis expectativas."</p>
+                    <div class="texto-oculto">
+                        <h3 class="nombre subtitulo azul">Nombre Apellido 4</h3>
+                        <p class="ocupacion texto dorado">Ocupacion 4</p>
+                    </div>
+                </article>
 
-                <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido 6</h3>
-                    <p class="ocupacion texto dorado">Ocupacion 6</p>
-                </div>
-            </article>
-            
+                <article class="card-carrusel slide" data-slideindex="4">
+                    <figure class="img-circulo">
+                        <img src="img/img_carrusel-test.jpg" alt="">
+                    </figure>
+                    <p class="coment texto">"El mejor equipo de Wedding Planners de la zona."</p>
+
+                    <div class="texto-oculto">
+                        <h3 class="nombre subtitulo azul">Nombre Apellido 5</h3>
+                        <p class="ocupacion texto dorado">Ocupacion 5</p>
+                    </div>
+                </article>
+
+                <article class="card-carrusel slide" data-slideindex="5">
+                    <figure class="img-circulo">
+                        <img src="img/img_carrusel-test.jpg" alt="">
+                    </figure>
+                    <p class="coment texto">"Simplemente perfecto, superó mis expectativas."</p>
+
+                    <div class="texto-oculto">
+                        <h3 class="nombre subtitulo azul">Nombre Apellido 6</h3>
+                        <p class="ocupacion texto dorado">Ocupacion 6</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="slide-indicators">
+                <div class="slide-indicator active"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+                <div class="slide-indicator"></div>
+            </div>
+
         </div>
-
-        <div class="slide-indicators">
-            <div class="slide-indicator active"></div>
-            <div class="slide-indicator"></div>
-            <div class="slide-indicator"></div>
-            <div class="slide-indicator"></div>
-            <div class="slide-indicator"></div>
-            <div class="slide-indicator"></div>
-        </div>
-        
-    </div>
-</section>
+    </section>
 
     <section class="blog-section ancho" id="blog">
         <h2 class="subtitulo">Our <span class="dorado">Blog</span></h2>
@@ -1038,6 +1059,21 @@
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
+    <section class="slides">
+        <div class="callbacks_container">
+            <ul class="rslides" id="slider4">
+                <li>
+                    <img src="img/banner2.jpg" alt="">
+                    <p class="caption">Este es el texto 1</p>
+                </li>
+                <li>
+                    <img src="img/banner1.jpg" alt="">
+                    <p class="caption">texto 2</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
     <section class="slide-section">
 
     </section>
@@ -1112,11 +1148,14 @@
     <div id="modal_video" class="modal-video">
         <div class="modal-contenido-video">
             <div class="video-responsive">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/1GbR7J3HaFo?si=4LStIptenKlFnrE6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1GbR7J3HaFo?si=4LStIptenKlFnrE6"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 <span class="cerrar-video" id="cerrar_modal_video">&times;</span>
             </div>
         </div>
-
+        <script src="carrousel.js"></script>
         <script>
             let modalYaMostrado = false;
 
