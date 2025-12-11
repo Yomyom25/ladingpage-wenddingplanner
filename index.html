@@ -19,6 +19,9 @@
 
     <script src="js/fancybox_min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
+
+    <script src="js/carousel.js"></script>
+    <link rel="stylesheet" href="css/carousel.css">
 </head>
 
 <body>
@@ -818,53 +821,103 @@
             </article>
         </div>
     </section>
+<section class="client-section ancho" id="clientes">
+    <p class="texto dorado">What They Are Saying</p>
+    <h2 class="subtitulo">Client's <span class="dorado">Feedback</span></h2>
+    <p class="texto texto-vertical">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
+        itaque et.Lorem ipsum dolor sit amet
+    </p>
 
-    <section class="client-section ancho" id="clientes">
-        <p class="texto dorado">What They Are Saying</p>
-        <h2 class="subtitulo">Client's <span class="dorado">Feedback</span></h2>
-        <p class="texto texto-vertical">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab deserunt hic natus eum adipisci optio maxime
-            itaque et.Lorem ipsum dolor sit amet
-        </p>
-
-        <div class="carrusel-container ancho">
-            <article class="card-carrusel">
+    <div id="carousel" class="carrusel-container ancho">
+        
+        <div id="slide-container">
+            
+            <article class="card-carrusel slide" data-slideindex="0">
                 <figure class="img-circulo">
                     <img src="img/img_carrusel-test.jpg" alt="">
                 </figure>
                 <p class="coment texto">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, excepturi."</p>
 
                 <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido</h3>
-                    <p class="ocupacion texto dorado">Ocupacion</p>
+                    <h3 class="nombre subtitulo azul">Nombre Apellido 1</h3>
+                    <p class="ocupacion texto dorado">Ocupacion 1</p>
                 </div>
             </article>
 
-                        <article class="card-carrusel">
+            <article class="card-carrusel slide" data-slideindex="1">
                 <figure class="img-circulo">
                     <img src="img/img_carrusel-test.jpg" alt="">
                 </figure>
-                <p class="coment texto">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, excepturi."</p>
+                <p class="coment texto">"Un servicio excelente. Los recomiendo al 100%."</p>
 
                 <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido</h3>
-                    <p class="ocupacion texto dorado">Ocupacion</p>
+                    <h3 class="nombre subtitulo azul">Nombre Apellido 2</h3>
+                    <p class="ocupacion texto dorado">Ocupacion 2</p>
                 </div>
             </article>
 
-                        <article class="card-carrusel">
+            <article class="card-carrusel slide" data-slideindex="2">
                 <figure class="img-circulo">
                     <img src="img/img_carrusel-test.jpg" alt="">
                 </figure>
-                <p class="coment texto">"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, excepturi."</p>
+                <p class="coment texto">"La boda de mis sueños se hizo realidad con Lovespring."</p>
 
                 <div class="texto-oculto">
-                    <h3 class="nombre subtitulo azul">Nombre Apellido</h3>
-                    <p class="ocupacion texto dorado">Ocupacion</p>
+                    <h3 class="nombre subtitulo azul">Nombre Apellido 3</h3>
+                    <p class="ocupacion texto dorado">Ocupacion 3</p>
                 </div>
             </article>
+            
+            <article class="card-carrusel slide" data-slideindex="3">
+                <figure class="img-circulo">
+                    <img src="img/img_carrusel-test.jpg" alt="">
+                </figure>
+                <p class="coment texto">"Atención al detalle y mucha profesionalidad."</p>
+
+                <div class="texto-oculto">
+                    <h3 class="nombre subtitulo azul">Nombre Apellido 4</h3>
+                    <p class="ocupacion texto dorado">Ocupacion 4</p>
+                </div>
+            </article>
+
+            <article class="card-carrusel slide" data-slideindex="4">
+                <figure class="img-circulo">
+                    <img src="img/img_carrusel-test.jpg" alt="">
+                </figure>
+                <p class="coment texto">"El mejor equipo de Wedding Planners de la zona."</p>
+
+                <div class="texto-oculto">
+                    <h3 class="nombre subtitulo azul">Nombre Apellido 5</h3>
+                    <p class="ocupacion texto dorado">Ocupacion 5</p>
+                </div>
+            </article>
+
+            <article class="card-carrusel slide" data-slideindex="5">
+                <figure class="img-circulo">
+                    <img src="img/img_carrusel-test.jpg" alt="">
+                </figure>
+                <p class="coment texto">"Simplemente perfecto, superó mis expectativas."</p>
+
+                <div class="texto-oculto">
+                    <h3 class="nombre subtitulo azul">Nombre Apellido 6</h3>
+                    <p class="ocupacion texto dorado">Ocupacion 6</p>
+                </div>
+            </article>
+            
         </div>
-    </section>
+
+        <div class="slide-indicators">
+            <div class="slide-indicator active"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+            <div class="slide-indicator"></div>
+        </div>
+        
+    </div>
+</section>
 
     <section class="blog-section ancho" id="blog">
         <h2 class="subtitulo">Our <span class="dorado">Blog</span></h2>

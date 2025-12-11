@@ -1238,6 +1238,7 @@ header {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    padding: 30px 0;
     text-align: left;
 }
 
@@ -1248,11 +1249,12 @@ header {
 }
 
 .texto-oculto {
-    opacity: 0
+    opacity: 0;
+    text-align: left;
 }
 
 .card-carrusel:hover .texto-oculto {
-    opacity: 1
+    opacity: 1;
 }
 
 /* SECCION: BLOG */
