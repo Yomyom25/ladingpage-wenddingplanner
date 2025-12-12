@@ -294,7 +294,15 @@
                             <i class="fa-solid fa-check"></i>
                         </div>
 
-                        <h3 class="texto">Enjoying & Eating</h3>
+                        <h3 class="texto acordeon-titulo">Enjoying & Eating</h3>
+
+                    </div>
+
+                    <div class="acordeon-item">
+                        <div class="acordeon-contenido">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut optio mollitia delectus
+                            harum deleniti? Iste illo pariatur commodi maiores quas.
+                        </div>
                     </div>
 
                     <div class="reason-text">
@@ -1263,6 +1271,15 @@
 
             //Script galleria de fotos con fancybox
             Fancybox.bind("[data-fancybox]", {});
+
+            //Acordeon 
+            $(".acordeon-titulo").click(function () {
+                var t = $(this);
+                var tp = t.next();
+                tp.slideToggle();
+
+                t.find("i").toggleClass("fa-plus fa-minus");
+            });
         </script>
 </body>
 

@@ -625,6 +625,11 @@ header {
     color: var(--color-grisOscuro);
 }
 
+.acordeon-item {
+    display: none;
+}
+
+
 .us-text .bold {
     font-weight: bold;
 }
